@@ -20,13 +20,6 @@ Install using Maven by adding the following to your `pom.xml`:
     <artifactId>datastar</artifactId>
     <version>1.0.0</version>
 </dependency>
-
-<repositories>
-    <repository>
-        <id>github</id>
-        <url>https://maven.pkg.github.com/starfederation/datastar</url>
-    </repository>
-</repositories>
 ```
 
 ## Usage
