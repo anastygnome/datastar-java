@@ -69,6 +69,23 @@
         <mockito.version>5.14.2</mockito.version>
         <jackson.databind.version>2.18.2</jackson.databind.version>
     </properties>
+<dependencyManagement>
+    <dependencies>
+        <!-- Core SDK -->
+        <dependency>
+            <groupId>dev.data-star</groupId>
+            <artifactId>datastar-java-sdk-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- JAX-RS extension -->
+        <dependency>
+            <groupId>dev.data-star</groupId>
+            <artifactId>datastar-java-sdk-jaxrs</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 
     <profiles>
         <profile>
@@ -84,6 +101,17 @@
                             <publishingServerId>central</publishingServerId>
                         </configuration>
                     </plugin>
+                    <plugin>
+  <groupId>com.github.ekryd.sortpom</groupId>
+  <artifactId>sortpom-maven-plugin</artifactId>
+  <version>3.3.0</version>
+  <configuration>
+    <sortDependencies>true</sortDependencies>
+    <sortPlugins>true</sortPlugins>
+    <keepBlankLines>true</keepBlankLines>
+  </configuration>
+</plugin>
+
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
