@@ -16,9 +16,10 @@ Install using Maven by adding the following to your `pom.xml`:
 
 ```xml
 <dependency>
-    <groupId>com.starfederation</groupId>
-    <artifactId>datastar</artifactId>
+    <groupId>dev.data-star</groupId>
+    <artifactId>datastar-java-sdk</artifactId>
     <version>1.0.0</version>
+    <type>pom</type>
 </dependency>
 ```
 
